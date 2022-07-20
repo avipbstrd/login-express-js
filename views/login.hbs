@@ -1,0 +1,43 @@
+<div class="row justify-content-md-center" style="background: rgb(40,64,212);
+background: linear-gradient(90deg, rgba(40,64,212,1) 24%, rgba(114,107,214,1) 65%);">
+  <div class="container py-4 h-100">
+    <div class="row d-flex justify-content-center h-100">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-4">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <div class="card-body p-4 ">
+            <div class="mb-md-5 mt-md-3 pb-5">
+              <form method="POST" action="/login">
+                <br class="form-group">
+                {{#if message}}
+                <div class="alert {{messageClass}}" role="alert">
+                  {{message}}
+                </div>
+                {{/if}}
+                <h2 class="fw-bold mb-2 text-uppercase text-center">Login</h2>
+                <p class="text-white-50 mb-5 text-center">silahkan masukan email dan password!</p>
+                <div class="form-outline form-white mb-4">
+                  <label class="form-label" for="exampleInputEmail1">Email</label>
+                  <input type="email" name="email" id="exampleInputEmail1" placeholder="Masukan Email"
+                    class="form-control form-control-lg" />
+                </div>
+                <div class="form-outline form-white mb-4">
+                  <label class="form-label" for="exampleInputPassword1">Password</label>
+                  <input type="password" name="password" placeholder="Masukan Password" id="exampleInputPassword1"
+                    class="form-control form-control-lg" />
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-outline-light btn-lg px-5 " type="submit">Login</button>
+                </div>
+                </br>
+                <div class="text-center">
+                  <p class="mb-0">Belum Punya Akun...? <a href="/register" class="text-white-50 fw-bold ">daftar</a>
+                  </p>
+                </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
